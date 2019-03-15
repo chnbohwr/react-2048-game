@@ -5,7 +5,7 @@ import useEventListener from "use-event-listener";
 const GAME_STATUS = {
   PLAYING: "PLAYING",
   WIN: "WIN",
-  LOSS: "LOSS"
+  LOSS: "LOSE"
 };
 
 const randomId = () =>

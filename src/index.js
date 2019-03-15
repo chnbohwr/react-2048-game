@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { createGlobalStyle } from "styled-components";
 import Board from "./Board";
-import Score from "./Score";
+import Header from "./Header";
 import useTiles from "./TileHook";
 import "animate.css";
 import "concatAll";
@@ -20,9 +20,12 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Score gameStatus={gameStatus} score={score} />
+      <Header
+        gameStatus={gameStatus}
+        score={score}
+        initialTiles={initialTiles}
+      />
       <Board size={4} tiles={tiles} />
-      <button onClick={initialTiles}>Restart</button>
     </div>
   );
 }

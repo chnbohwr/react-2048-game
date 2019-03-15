@@ -1,6 +1,24 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+const tileBackground = {
+  2: "#eee4da",
+  4: "#ede0c8",
+  8: "#f2b179",
+  16: "#f59563",
+  32: "#f67c5f",
+  64: "#f65e3b",
+  128: "#edcf72",
+  256: "#edcc61",
+  512: "#edc850",
+  1024: "#edc53f",
+  2048: "#edc22e"
+};
+
+const tileColor = value => (value >= 8 ? "#f9f6f2" : "#776e66");
+
+const tileFontSize = value => (value > 100 ? (value > 1000 ? 35 : 45) : 55);
+
 const Container = styled.div`
   width: 450px;
   height: 450px;
@@ -46,10 +64,10 @@ const Tile = styled.div`
 const TileInner = styled.div`
   width: 100px;
   height: 100px;
-  background: #efe3d9;
-  font-size: 55px;
+  background: ${p => tileBackground[p.value]};
+  font-size: ${p => tileFontSize(p.value)}px;
   font-weight: 700;
-  color: #776e66;
+  color: ${p => tileColor(p.value)};
   text-align: center;
   line-height: 100px;
   animation-name: ${p => (p.isNew ? "fadeIn" : p.isMerge ? "tada" : "")};
