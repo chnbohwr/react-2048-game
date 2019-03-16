@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { createGlobalStyle } from "styled-components";
-import Board from "./Board";
-import Header from "./Header";
-import useTiles from "./TileHook";
+import Board from "./components/Board/Board";
+import Header from "./components/Header/Header";
+import useTiles from "./hooks/TileHook";
 import "animate.css";
 import "concatAll";
 
