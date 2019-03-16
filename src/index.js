@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { createGlobalStyle } from "styled-components";
 import Board from "./components/Board/Board";
@@ -25,7 +25,7 @@ function App() {
         score={score}
         initialTiles={initialTiles}
       />
-      <Board size={4} tiles={tiles} />
+      <Board tiles={tiles} />
     </div>
   );
 }
